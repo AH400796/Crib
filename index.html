@@ -22,11 +22,38 @@
             font-size: 16px;
             background-color: rgb(243, 241, 233);
         }
+        .css-link,
+        span {
+            opacity: 0.3;
+            color: rgb(44, 182, 26);           
+        }
+        span {
+            font-size: 19px;
+            color: black;
+        }
+        .css-link:hover {
+            opacity: 1;
+            color: rgb(168, 9, 9);
+        }
+        #top {
+            text-align:center;           
+        }
+        
    </style>
 </head>
-<body>
-    <div>
-         <h1 style="text-align:center;">Основні теги HTML5</h1>
+<body>    
+    <h1 id="top">Основні теги HTML5<br><span>по CSS сюди &#8658</span><a class="css-link" href="css.html" target="_blank" rel="noreferrer noopener">CSS</a></h1>
+        <table border="0">
+            <tr>
+                <td colspan="3"><p>Більше інформації по тегам, атрибутам, їх специфікації та правил вкладення один в одного шукайте тут:</p></td>              
+            </tr>
+            <tr>
+                <td style="text-align:center; width: 33.3%"><a href="https://htmlreference.io/" target="_blank" rel="noreferrer noopener">HTMLreference</a></td>
+                <td style="text-align:center; width: 33.3%"><a href="https://css.in.ua/html/tags" target="_blank" rel="noreferrer noopener">CSS.in.ua</a></td> 
+                <td style="text-align:center; width: 33.3%"><a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer noopener">HTML Living Standard</a></td>               
+            </tr>             
+        </table>
+    <br>     
     <p><b>&lt!doctype&gt</b> - це не тег, а обов'язкова інструкція оголошення типу документа. Вона потрібна для того, щоб повідомити
     браузеру, в якій версії HTML написаний документ</p>
     <table border="1">
@@ -369,50 +396,73 @@
                 <td colspan="2"><p>Є офіційна сторінка <a href="https://dev.w3.org/html5/html-author/charref" target="_blank" rel="noreferrer noopener">W3C</a> і сервіс від <a href="https://www.toptal.com/designers/htmlarrows/" target="_blank" rel="noreferrer noopener">Toptal</a>, де можна знайти мнемоніку для будь-якого символу</p></td>
             </tr>
         </tbody>
-    </table><br>
-    
-          
-   
-   
-    
-    
-    <h2 style="text-align:center;">Відео/аудіо</h2>
-    <p><b>&ltvideo&gt&lt/video&gt</b> - розмітка відеоконтенту</p>
-    <p>Атрибути:</p>
-    <p>src=" " - вказує адресу відеофайлу</p>
-    <p>poster=" " - адреса зображення, яке використовується як постер, якщо відео завантажене або ще не відтворюється</p>
-    <p>width і height =" " - задають висоту і ширину як у зображення</p>
-    <p>controls - атрибут-прапорець, якщо присутній, додаються елементи управління відео</p>
-    <p>autoplay - атрибут-прапорець, якщо присутній, відтворення відео починається як тільки воно доступне</p>
-    <p>loop - атрибут-прапорець, якщо присутній, відео буде повторюватися в циклі</p>
-    <p>preload  - вказує режим попереднього завантаження відео</p>
-    <p>none - не завантажувати відео заздалегідь</p>
-    <p>metadata - завантажити службову інформацію (тривалість тощо)</p>
-    <p>auto - заздалегідь завантажувати всі відео</p>
-    <p><b>&ltsource&gt</b> - тег застосовують коли необхідно надати браузеру вибір формату відео. Тоді атрибут src=" " не пишеться в тегу &ltvideo&gt, а пишеться для кожного формату 
-     окремо в &ltsource&gt + використ. атрибут type=" " (що описує відеоформат конкретного файлу - "video/webm"; "video/mp4"; "video/ogg" тощо): <br>
-    <p></p>&ltsource src=" " type=" "&gt</p>
-    <p><b>&ltaudio&gt&lt/audio&gt</b> - розмітка аудіоконтенту</p>
-    <p>Атрибути:</p>
-    <p>src=" " - вказує адресу аудіофайлу</p>   
-    <p>controls - атрибут-прапорець, якщо присутній, додаються елементи управління аудіо</p>
-    <p>autoplay - атрибут-прапорець, якщо присутній, відтворення аудіо починається як тільки воно доступне</p>
-    <p>loop - атрибут-прапорець, якщо присутній, аудіо буде повторюватися в циклі</p>
-    <p>preload - вказує режим попереднього завантаження аудіо</p>
-    <p>none - не завантажувати аудіо заздалегідь</p>
-    <p>metadata - завантажити службову інформацію (тривалість тощо)</p>
-    <p>auto - заздалегідь завантажувати увесь аудіофайл</p>
-    <p><b>&ltsource&gt</b> - тег застосовують коли необхідно надати браузеру вибір формату аудіо. Тоді атрибут src=" " не пишеться в тегу &ltaudio&gt, а пишеться для кожного формату
+    </table>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2"><h2>Відео/аудіо</h2></th>                             
+            </tr>              
+        </thead>
+        <tbody>
+            <tr>
+                <td><p><b>&ltvideo&gt&lt/video&gt</b> - розмітка відеоконтенту</p></td>
+                <td><p><b>&ltaudio&gt&lt/audio&gt</b> - розмітка аудіоконтенту</p></td>
+            </tr>
+            <tr>
+                <td colspan="2"><p style="text-align: center;">Атрибути та додатковий тег <b>&ltsource&gt</b>:</p></td>                           
+            <tr>
+                <td><p>src=" " - вказує адресу відеофайлу</p></td>
+                <td><p>src=" " - вказує адресу аудіофайлу</p></td>                
+            </tr>
+            <tr>
+                <td><p>poster=" " - адреса зображення, яке використовується як постер, якщо відео завантажене або ще не відтворюється</p></td>
+                <td><p>controls - атрибут-прапорець, якщо присутній, додаються елементи управління аудіо</p></td>                
+            </tr>
+            <tr>
+                <td><p>width і height =" " - задають висоту і ширину як у зображення</p></td>
+                <td><p>autoplay - атрибут-прапорець, якщо присутній, відтворення аудіо починається як тільки воно доступне</p></td>                
+            </tr>
+            <tr>
+                <td><p>controls - атрибут-прапорець, якщо присутній, додаються елементи управління відео</p></td>
+                <td><p>loop - атрибут-прапорець, якщо присутній, аудіо буде повторюватися в циклі</p></td>                
+            </tr>
+            <tr>
+                <td><p>autoplay - атрибут-прапорець, якщо присутній, відтворення відео починається як тільки воно доступне</p></td>
+                <td><p>preload - вказує режим попереднього завантаження аудіо</p></td>                
+            </tr>
+            <tr>
+                <td><p>loop - атрибут-прапорець, якщо присутній, відео буде повторюватися в циклі</p></td>
+                <td><p>none - не завантажувати аудіо заздалегідь</p></td>                
+            </tr>
+            <tr>
+                <td><p>preload  - вказує режим попереднього завантаження відео</p></td>
+                <td><p>metadata - завантажити службову інформацію (тривалість тощо)</p></td>                
+            </tr>
+            <tr>
+                <td><p>none - не завантажувати відео заздалегідь</p></td>
+                <td><p>auto - заздалегідь завантажувати увесь аудіофайл</p></td>                
+            </tr>
+            <tr>
+                <td><p>metadata - завантажити службову інформацію (тривалість тощо)</p></td>
+                <td><p><b>&ltsource&gt</b> - тег застосовують коли необхідно надати браузеру вибір формату аудіо. Тоді атрибут src=" " не пишеться в тегу &ltaudio&gt, а пишеться для кожного формату
     окремо в &ltsource&gt + використ. атрибут type=" " (що описує аудіоформат конкретного файлу - "audio/mpeg"; "audio/ogg" тощо): <br>
-    <p>&ltsource src=" " type=" "&gt</p>
-    <p>Якщо браузер дуже старий і не підтримує HTML5 медіаконтент, потрібно сказати про це користувачеві.
-    Для цього, всередині тегів &ltvideo/audio&gt, після всіх тегів &ltsource&gt додамо рядок тексту, який браузер відобразить,
-    якщо не підтримує медіаконтент:</p>
-    <p>Your browser does not support the &ltcode&gtvideo/audio&lt/code&gt element.</p>
-    </div>
-  
-    <h1 style="text-align:center;">CSS</h1>
-    <h2 style="text-align:center;">Оформлення тексту</h2>
-
-</body>
+    <p>&ltsource src=" " type=" "&gt</p></td>                
+            </tr>
+            <tr>
+                <td><p>auto - заздалегідь завантажувати всі відео</p></td>
+                <td rowspan="2"><p>Якщо браузер дуже старий і не підтримує HTML5 медіаконтент, потрібно сказати про це користувачеві.
+    Для цього, всередині тегів &ltvideo/audio&gt, після всіх тегів &ltsource&gt додаємо рядок тексту, який браузер відобразить,
+    якщо не підтримує медіаконтент:</p><p> <b>Your browser does not support the &ltcode&gtvideo/audio&lt/code&gt element.</b></p></td>                
+            </tr>
+            <tr>
+                <td><p><b>&ltsource&gt</b> - тег застосовують коли необхідно надати браузеру вибір формату відео. Тоді атрибут src=" " не пишеться в тегу &ltvideo&gt, а пишеться для кожного формату 
+     окремо в &ltsource&gt + використ. атрибут type=" " (що описує відеоформат конкретного файлу - "video/webm"; "video/mp4"; "video/ogg" тощо): <br>
+    <p>&ltsource src=" " type=" "&gt</p></td>                                    
+            </tr>  
+        </tbody>
+    </table>
+    <br>
+    <div  style="text-align:center; margin-bottom: 30px;"><a href="#top">Наверх</a></div>
+    
 </html>
