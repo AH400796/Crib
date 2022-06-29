@@ -1,4 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Шпаргалка по HTML5 та CSS</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        
+        .first-td {
+            width: 15%;
+        }
+        .third-td {
+            width: 25%;
+            text-align: left;
+        }
 
-     
-    <h1 style="text-align:center;">CSS</h1>
-    <h2 style="text-align:center;">Оформлення тексту</h2>
+
+        th {
+            background-color: #b9b9b9;
+        }
+        p {
+            margin: 10px;
+            text-indent: 10px;            
+        }
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 16px;
+            background-color: rgb(243, 241, 233);
+        }
+        .link,
+        span {
+            opacity: 0.3;
+            color: rgb(44, 182, 26);           
+        }
+        span {
+            font-size: 19px;
+            color: black;
+        }
+        .link:hover {
+            opacity: 1;
+            color: rgb(168, 9, 9);
+        }
+        #top {
+            text-align:center;           
+        }
+        
+   </style>
+</head>
+<body  id="top">    
+    <h1>Каскадні таблиці стилів (CSS)<br><a class="link" href="index.html" target="_blank" >HTML</a><span> &#8656 назад до HTML</span></h1>
+        <table border="0">
+            <tr>
+                <td style="text-align:center" colspan="3"><p>Більше інформації по CSS , атрибутам, їх специфікаціях та правилам вкладення один в одного шукайте тут:</p></td>              
+            </tr>
+            <tr>
+                <td style="text-align:center; width: 33.3%"><a href="https://htmlreference.io/" target="_blank" rel="noreferrer noopener">HTMLreference</a></td>
+                <td style="text-align:center; width: 33.3%"><a href="https://css.in.ua/html/tags" target="_blank" rel="noreferrer noopener">CSS.in.ua</a></td> 
+                <td style="text-align:center; width: 33.3%"><a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer noopener">HTML Living Standard</a></td>               
+            </tr>             
+        </table>
+    <br>    
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="3"><h2>Підключення стилів</h2></th>              
+            </tr>              
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-td"><p><b>Вбудовані стилі</b></p></td>
+                <td><p>Вбудовані (інлайн) стилі задаються тегу безпосередньо в тезі атрибутом style. Їх неможливо масштабувати, складно перевизначати 
+                    і використовувати повторно, тому вони застосовуються в дуже рідкісних випадках. Наприклад, для динамічних стилів, які
+                     встановлюються під час виконання JavaScript коду, коли ми заздалегідь не знаємо, яке буде значення властивості.</p> </td>
+                <td class="third-td"><img src="./images/1.png" alt=""></p></td>           
+            </tr>
+            <tr>
+                <td class="first-td"><p><b>Вбудована таблиця стилів</b></p></td>
+                <td><p>За такого підходу CSS-правила додаються всередину тегу &ltstyle&gt в шапці документа. Їх неможливо використовувати повторно
+                     на інших сторінках і складно масштабувати і підтримувати. Іноді цей підхід використовується для оптимізації швидкості відтворення
+                      сторінки, додаючи найважливіші стилі безпосередньо в HTML-документ. Ця просунута техніка називається Critical CSS.</p> </td>
+                <td class="third-td"><img src="./images/2_220626195435.png" alt="">  </td>           
+            </tr>  
+
+  
+        </tbody>
+    </table>
+</body>
+</html>
+   
+   
+ 
