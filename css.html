@@ -5,7 +5,8 @@
     <title>Шпаргалка по HTML5 та CSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@600&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="./styles.css">  
     <style>
         table {
             width: 100%;
@@ -14,11 +15,19 @@
         .first-td {
             width: 15%;
         }
+        .first-td-tx {
+            width: 25%;
+        }
 
         .third-td {
             background: rgb(40, 43, 54);
             width: 25%;
             text-align: left;
+        }
+        .third-td-tx {
+            background: rgb(243, 241, 233);
+            width: 45%;
+            text-align: center;
         }
 
         th {
@@ -68,16 +77,7 @@
 </head>
 <body  id="top">    
     <h1>Каскадні таблиці стилів (CSS)<br><a class="link" href="index.html" target="_blank" >HTML</a><span> &#8656 назад до HTML</span></h1>
-        <table border="0">
-            <tr>
-                <td style="text-align:center" colspan="3"><p>Більше інформації по CSS , атрибутам, їх специфікаціях та правилам вкладення один в одного шукайте тут:</p></td>              
-            </tr>
-            <tr>
-                <td style="text-align:center; width: 33.3%"><a href="https://htmlreference.io/" target="_blank" rel="noreferrer noopener">HTMLreference</a></td>
-                <td style="text-align:center; width: 33.3%"><a href="https://css.in.ua/html/tags" target="_blank" rel="noreferrer noopener">CSS.in.ua</a></td> 
-                <td style="text-align:center; width: 33.3%"><a href="https://html.spec.whatwg.org/" target="_blank" rel="noreferrer noopener">HTML Living Standard</a></td>               
-            </tr>             
-        </table>
+        
     <br>    
     <table border="1">
         <thead>
@@ -161,13 +161,13 @@
                 <td class="third-td"><img src="./images/8.jpg" alt=""></td>           
             </tr>
              <tr>
-                <td class="first-td"><p><b>Популярні комбіновані селектори:<br><br>Селектор нащадка<br><br>Селектор дитини<br><br>Селектор сусіда<br><br>Споріднений селектор<br>(сестринський, сіблінговий<br><br>Селектор атрибуту<br>(див. вище)</b></p></td>
+                <td class="first-td"><p><b>Популярні комбіновані селектори:<br><br>Селектор нащадка<br><br>Селектор дитини<br><br>Селектор сусіда<br><br>Споріднений селектор<br>(сестринський, сіблінговий)<br><br>Селектор атрибуту<br>(див. вище)</b></p></td>
                 <td><p>Селектор нащадка (або контекстний селектор) - застосовує стилі до дітей і нащадків елемента за будь-якої глибини вкладеності. Між складовими елементами
                     селектора ставиться "пробіл": " "<br><hr><br>Селектор дитини - один з поширених селекторів, який дозволяє вибрати тільки безпосередню дитину всередині батьківського
                      елементу - прямого нащадка. Між складовими елементами селектора ставиться кутова дужка "більше": ">"<br><hr><br>Селектор сусіда - використовується 
                      для вибірки наступного  сусідського елемента після означеного. Між складовими елементами селектора ставиться знак "плюс": "+"<br><hr><br>Споріднений селектор дозволяє вибирати 
                      елементи HTML-сторінки, що є спорідненими по відношенню один до одного (тобто мають спільного батька і знаходяться на одному рівні). 
-                     Сестринські селектори схожі на сусідні, але відрізняються тим, що стиль застосовується до всіх елементів обраного типу, а не лише до першого з них. 
+                     Споріднені селектори схожі на сусідні, але відрізняються тим, що стиль застосовується до всіх елементів обраного типу, а не лише до першого з них. 
                      Між складовими елементами селектора ставиться знак "тильда": "~" </p>
                 </td>
                 <td class="third-td"><img src="./images/9.1.jpg" alt=""><img src="./images/9.jpg" alt=""></td>           
@@ -195,69 +195,318 @@
     <table border="1">
         <thead>
             <tr>
-                <th colspan="3"><h2>Підключення стилів</h2></th>              
+                <th colspan="3"><h1>Властивості CSS </h1><p> Перелік найбільш використовуваних. Довідник з усіма властивостями
+                     -  <a href="https://css.in.ua/css/properties" target="_blank">тут</a>.</p></th>              
+            </tr> 
+            <tr>
+                <th colspan="3"><h2>Основні властивості для оформлення тексту</h2></th>              
             </tr>              
         </thead>
         <tbody>
             <tr>
-                <td class="first-td"><p><b>Вбудовані стилі<br>(inline)</b></p></td>
-                <td><p>Вбудовані (інлайн) стилі задаються тегу безпосередньо в тезі атрибутом style. Їх неможливо масштабувати, складно перевизначати 
-                    і використовувати повторно, тому вони застосовуються в дуже рідкісних випадках. Наприклад, для динамічних стилів, які
-                     встановлюються під час виконання JavaScript коду, коли ми заздалегідь не знаємо, яке буде значення властивості.</p>
-                </td>
-                <td class="third-td"><img src="./images/1.jpg" alt=""></p></td>           
+                <td class="first-td-tx" rowspan="5"><p><b>text-decoration</b><br><br>Задає різні декоративні підкреслення та інші ефекти тексту.</p></td>
+                <td><p>none</p></td>
+                <td class="third-td-tx" style="text-decoration: none"><p></p>Відсутнє підкреслення тексту</p></td>           
             </tr>
             <tr>
-                <td class="first-td"><p><b>Вбудована таблиця стилів<br>(internal)</b></p></td>
-                <td><p>За такого підходу CSS-правила додаються всередину тегу &ltstyle&gt в шапці документа. Їх неможливо використовувати повторно
-                     на інших сторінках і складно масштабувати і підтримувати. Іноді цей підхід використовується для оптимізації швидкості відтворення
-                      сторінки, додаючи найважливіші стилі безпосередньо в HTML-документ. Ця просунута техніка називається Critical CSS.</p>
-                </td>
-                <td class="third-td"><img src="./images/2.jpg" alt=""></td>           
+                <td><p>underline</p></td>
+                <td class="third-td-tx" style="text-decoration: underline"></p>Нижнє підкреслення тексту</p></td>                                       
             </tr>
             <tr>
-                <td class="first-td"><p><b>Зовнішня таблиця стилів<br>(external)</b></p></td>
-                <td><p>Зовнішній CSS-код легко масштабувати, підтримувати і використовувати повторно на інших сторінках, тому це стандарт підключення
-                     стилів. У проекті створюється окремий файл стилів з розширенням .css і підключається в HTML-документі.</p>
-                </td>
-                <td class="third-td"><img src="./images/3.jpg" alt=""></td>           
+                <td><p>line-through</p></td>
+                <td class="third-td-tx" style="text-decoration: line-through"></p>Перекреслений текст</p></td>                     
             </tr>
-        </tbody>
-    </table>
-    <br>
-    <table border="1">
-        <thead>
             <tr>
-                <th colspan="3"><h2>Підключення стилів</h2></th>              
+                <td><p>overline</p></td>
+                <td class="third-td-tx" style="text-decoration: overline"></p>Верхнє підкреслення тексту</p></td>                      
+            </tr>
+            <tr>
+                <td colspan="2"><p>Це найбільшпопулярні та використовувані значення. За інформацією про інші значення -  <a href="https://css.in.ua/css/property/text-decoration" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="5"><p><b>text-transform</b><br><br>Управляє регістром символів у тексті, наприклад, зробити всі літери 
+                    великими або малими. У розмітці текст завжди набирається відповідно до правил мови. Після чого, за допомогою text-transform, приводиться
+                     до потрібного вигляду, тому що все оформлення повинно бути в CSS.</p></td>
+                <td><p>none</p></td>
+                <td class="third-td-tx" style="text-transform: none;"><p>Без змін</p></td>           
+            </tr>
+            <tr>
+                <td><p>uppercase</p></td>
+                <td class="third-td-tx" style="text-transform: uppercase"><p>Усі літери великі</p></p></td>                                       
+            </tr>
+            <tr>
+                <td><p>lowercase</p></td>
+                <td class="third-td-tx" style="text-transform: lowercase"><p>Усі літери малі</p></p></td>                     
+            </tr>
+            <tr>
+                <td><p>capitalize</p></td>
+                <td class="third-td-tx" style="text-transform: capitalize"><p>Перші літери кожного слова великі</p></p></td>                      
+            </tr>
+            <tr>
+                <td colspan="2"><p>Це найбільшпопулярні та використовувані значення. За інформацією про інші значення -  <a href="https://css.in.ua/css/property/text-transform" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="5"><p><b>text-align</b><br><br>Управляє вирівнюванням текстового вмісту елемента за горизонталлю.</p></td>
+                <td><p>left</p></td>
+                <td class="third-td-tx" style="text-align: left"><p>Вирівнює текстовий вміст вліво</p></td>           
+            </tr>
+            <tr>
+                <td><p>right</p></td>
+                <td class="third-td-tx" style="text-align: right"><p>Вирівнює текстовий вміст вправо</p></td>                                       
+            </tr>
+            <tr>
+                <td><p>center</p></td>
+                <td class="third-td-tx" style="text-align: center"><p>Вирівнює текстовий вміст по центру</p></td>                     
+            </tr>
+            <tr>
+                <td><p>justify</p></td>
+                <td class="third-td-tx" style="text-align: justify"><p>Вирівнювання тексту по ширині. Текст розтянеться від лівого краю до правого 
+                    (як в газетах і журналах). Не працює з inline та inline-block елементами, повинно бути не менше 2 рядків текстового контенту</p></td>                      
+            </tr>
+            <tr>
+                <td colspan="2"><p>Це найбільшпопулярні та використовувані значення. За інформацією про інші значення -  <a href="https://css.in.ua/css/property/text-align" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="4"><p><b>text-indent</b><br><br>Встановлює величину відступу першого рядка блоку тексту, наприклад абзацу. 
+                    Не впливає на всі інші рядки, крім першого.</p></td>
+                <td><p>length</p></td>
+                <td class="third-td-tx"><p>Значення в одиницях довжини (px, em, rem, in, pt тощо)</p></td>           
+            </tr>
+            <tr>
+                <td><p>percentage</p></td>
+                <td class="third-td-tx"><p>При завданні значення у відсотках, відступ першого рядка обчислюється
+                     в залежності від ширини батьківського блоку</p></td>                                       
+            </tr>
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>            
+            <tr>
+                <td colspan="2"><p> Це найбільшпопулярні та використовувані значення. За інформацією про інші значення - <a href="https://css.in.ua/css/property/text-indent" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="7"><p><b>line-height</b><br><br>Встановлює міжрядковий інтервал (інтерлін'яж, висоту рядка) тексту. 
+                    За замовчуванням відстань між рядками залежить від виду шрифту і його розмірів, і визначається браузером автоматично.</p></td>
+                <td><p>number (множник)</p></td>
+                <td class="third-td-tx"><p>Число, яке буде множитися на поточний розмір шрифту, щоб встановити висоту рядка</p></td>           
+            </tr>
+            <tr>
+                <td><p>length</p></td>
+                <td class="third-td-tx"><p>Фіксована висота рядка в px, pt, cm та інші величини прийняті в CSS.</p></td>                                       
+            </tr>
+            <tr>
+                <td><p>% (відсотки)</p></td>
+                <td class="third-td-tx"><p>Висота рядка у відсотках. Залежить від розміру шрифту.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>normal</p></td>
+                <td class="third-td-tx"><p>Звичайна висота рядка. Без задання.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює властивість у значення без задання</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
             </tr>              
-        </thead>
-        <tbody>
             <tr>
-                <td class="first-td"><p><b>Вбудовані стилі<br>(inline)</b></p></td>
-                <td><p>Вбудовані (інлайн) стилі задаються тегу безпосередньо в тезі атрибутом style. Їх неможливо масштабувати, складно перевизначати 
-                    і використовувати повторно, тому вони застосовуються в дуже рідкісних випадках. Наприклад, для динамічних стилів, які
-                     встановлюються під час виконання JavaScript коду, коли ми заздалегідь не знаємо, яке буде значення властивості.</p>
-                </td>
-                <td class="third-td"><img src="./images/1.jpg" alt=""></p></td>           
+                <td colspan="2"><p> Детальніше - <a href="https://css.in.ua/css/property/line-height" target="_blank">сюди</a>.</p></td>                                     
             </tr>
             <tr>
-                <td class="first-td"><p><b>Вбудована таблиця стилів<br>(internal)</b></p></td>
-                <td><p>За такого підходу CSS-правила додаються всередину тегу &ltstyle&gt в шапці документа. Їх неможливо використовувати повторно
-                     на інших сторінках і складно масштабувати і підтримувати. Іноді цей підхід використовується для оптимізації швидкості відтворення
-                      сторінки, додаючи найважливіші стилі безпосередньо в HTML-документ. Ця просунута техніка називається Critical CSS.</p>
-                </td>
-                <td class="third-td"><img src="./images/2.jpg" alt=""></td>           
+                <td class="first-td-tx" rowspan="5"><p><b>letter-spacing</b><br><br>Визначає інтервал між символами.
+                     За замовчуванням відстань між символами встановлюється, виходячи з типу і виду шрифту, його розмірів і налаштувань операційної системи.</p></td>
+                <td><p>length</p></td>
+                <td class="third-td-tx"><p>В якості значення приймаються будь-які одиниці довжини, прийняті в CSS - наприклад, пікселі (px), дюйми (in), пункти (pt) та ін.
+                     Найкращий результат дає використання відносних одиниць заснованих на розмірі шрифту (em і ex).</p></td>          
+            </tr>          
+            <tr>
+                <td><p>normal</p></td>
+                <td class="third-td-tx"><p>Задає інтервал між символами. Без задання.</p></td>                     
             </tr>
             <tr>
-                <td class="first-td"><p><b>Зовнішня таблиця стилів<br>(external)</b></p></td>
-                <td><p>Зовнішній CSS-код легко масштабувати, підтримувати і використовувати повторно на інших сторінках, тому це стандарт підключення
-                     стилів. У проекті створюється окремий файл стилів з розширенням .css і підключається в HTML-документі.</p>
-                </td>
-                <td class="third-td"><img src="./images/3.jpg" alt=""></td>           
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює цю властивість в значення без задання</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>              
+            <tr>
+                <td colspan="2"><p> Детальніше - <a href="https://css.in.ua/css/property/letter-spacing" target="_blank">сюди</a>.</p></td>                                     
             </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="8"><p><b>text-shadow</b><br><br>Контролює тінь тексту, а також встановлює 
+                    її параметри: зміщення (h-shadow/v-shadow), радіус розмиття, колір:  <br><br>text-shadow: h-shadow v-shadow blur-radius color </p></td>
+                <td><p>none</p></td>
+                <td class="third-td-tx"><p>Тінь відсутня.</p></td>          
+            </tr>          
+            <tr>
+                <td><p>h-shadow</p></td>
+                <td class="third-td-tx"><p>Обов'язково. Зміщення тіні по горизонталі. Допускаються від'ємні значення.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>v-shadow</p></td>
+                <td class="third-td-tx"><p>Обов'язково. Зміщення тіні по вертикалі. Допускаються від'ємні значення.</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>blur-radius</p></td>
+                <td class="third-td-tx"><p>Радіус розмиття тіні.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>color</p></td>
+                <td class="third-td-tx"><p>Колір тіні.</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює властивість у значення без задання.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>                
+            <tr>
+                <td colspan="2"><p> На один елемент можна додати кілька тіней, вказавши їх через кому. Виходить багатошаровий пиріг
+                     з тіней: <br> text-shadow: 2px 2px 20px #ff0000, 5px 5px 5px #000000; <br> Детальніше - 
+                     <a href="https://css.in.ua/css/property/text-shadow" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="8"><p><b>white-space</b><br><br>За замовчуванням браузер ігнорує більше одного пробілу
+                     і перенесення рядка в HTML-розмітці. Властивість white-space, як і тег &ltpre&gt, але гнучкіше управляє форматуванням
+                        пробілів і перенесень тексту.</p></td>
+                <td><p>normal</p></td>
+                <td class="third-td-tx"><p>Текст - переноситься, пробіли - не враховуються</p></td>          
+            </tr>          
+            <tr>
+                <td><p>nowrap</p></td>
+                <td class="third-td-tx"><p>Текст - не переноситься, пробіли - не враховуються</p></td>                     
+            </tr>
+            <tr>
+                <td><p>pre</p></td>
+                <td class="third-td-tx"><p>Текст - не переноситься, пробіли - враховуються</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>pre-wrap</p></td>
+                <td class="third-td-tx"><p>Текст - переноситься, пробіли - враховуються</p></td>                     
+            </tr>
+            <tr>
+                <td><p>pre-line</p></td>
+                <td class="third-td-tx"><p>Текст - переноситься, пробіли - не враховуються</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює властивість у значення без задання.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>                          
+            <tr>
+                <td colspan="2"><p> P.S. У Firefox для &lttextarea&gt значення normal, nowrap, і pre сприймаються як pre-wrap. Детальніше - <a href="https://css.in.ua/css/property/white-space" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <thead>
+                <tr>
+                    <th colspan="3"><h2>Основні властивості для шрифту</h2></th>              
+                </tr>
+            </thead>
+            <tr>
+                <td class="first-td-tx" rowspan="2"><p><b>font-size</b><br><br>Задає розмір шрифту елемента в абсолютних або відносних одиницях виміру.</p></td>
+                <td colspan="2"><p>Розмір шрифту - це висота від базової лінії літери до її верхнього краю. Дозволяється використовувати будь-які допустимі одиниці
+                     CSS: em (висота шрифту елемента), ex (висота символу х), пункти (pt), пікселі (px), відсотки (%) і ін. За 100% береться розмір шрифту батьківського елементу. 
+                      Негативні значення не допускаються.</p>
+                </td>                     
+            </tr>           
+            <tr>
+                <td colspan="2"><p>За допустимими значеннями властивості -  <a href="https://css.in.ua/css/property/font-size" target="_blank">сюди</a>.</p></td>                                     
+            </tr>          
+                        
+            <tr>
+                <td class="first-td-tx" rowspan="2"><p><b>font-weight</b><br><br>Контролює товщину накреслення (жирність, вага) літер шрифту.</p></td>
+                <td colspan="2"><p>Значення властивості можна задавати набором зарезервованих слів аб
+                    о цифрами від 100 до 900 з кроком 100, які задають ступінь товщини гліфа від тонкого 100 до товстого 900. Вага шрифтів, доступних вам, залежить 
+                    від сімейства шрифтів, який ви використовуєте. Деякі шрифти мають обличчя символів лише для нормальної (normal) та жирної (bold) товщини. 
+                    Для таких шрифтів жирність 100-500 є normal, а 600-900 - bold. Коли вказано значення, для якого не існує обличчя (спеціальних гліфів саме
+                     такої товщини) у шрифті, використовується найбільш подібні обличчя</p></td>                         
+            </tr>
+            <tr>
+                <td colspan="2"><p>За допустимими значеннями властивості -  <a href="https://css.in.ua/css/property/font-weight" target="_blank">сюди</a>.</p></td>                                     
+            </tr>             
+            <tr>
+                <td class="first-td-tx" rowspan="6"><p><b>font-style</b><br><br>Задає накреслення тексту.</p></td>
+                <td><p>normal</p></td>
+                <td class="third-td-tx"><p>Звичайний стиль шрифту. Без задання.</p></td>          
+            </tr>          
+            <tr>
+                <td><p>italic</p></td>
+                <td class="third-td-tx"><p>Курсивний шрифт. Імітує рукописний текст.</p></td>                     
+            </tr>
+            <tr>
+                <td><p>oblique</p></td>
+                <td class="third-td-tx"><p>Похилий шрифт. Літери нахиляються вправо.</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює цю властивість в значення без задання</p></td>                     
+            </tr>
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>              
+            <tr>
+                <td colspan="2"><p> Детальніше - <a href="https://css.in.ua/css/property/font-style" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="5"><p><b>font-family</b><br><br>Задає шрифт для тексту.</p></td>
+                <td colspan="2"><p>Шрифт — це набір друкарських літер, цифр і спеціальних знаків певного стилю для набору тексту. Шрифти ділять
+                     на кілька основних груп (сімейств): шрифти із зарубками (serif), шрифти без зарубок (sans-serif), моноширинні (monospace),
+                      декоративні та рукописні. MacOS, Linux і Windows містять набір стандартних шрифтів з кожного сімейства. За замовчуванням,
+                       якщо жоден інший шрифт не заданий, браузер використовує Times New Roman з сімейства із зарубками (serif).</p>
+                    </td>         
+            </tr>
+            <tr>
+                <td><p>font (family-name generic-family)</p></td>
+                <td class="third-td-tx"><p>Ім'я сімейства шрифту або спільне сімейство.</p></td>                     
+            </tr> 
+            <tr>
+                <td><p>initial</p></td>
+                <td class="third-td-tx"><p>Встановлює цю властивість в значення без задання (залежить від браузера)</p></td>                     
+            </tr>
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr>              
+            <tr>
+                <td colspan="2"><p> Детальніше - <a href="https://css.in.ua/css/property/font-family" target="_blank">сюди</a>.</p></td>                                     
+            </tr>
+             <tr>
+                <td colspan="3"><p> Пікдлючення шрифтів виконуємо в HTML з сервісу <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> через тег &ltlink&gt.</p></td>                                     
+            </tr>
+                                    
+                    
         </tbody>
     </table>
+     
+
+
+    <div class="test">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime omnis reprehenderit autem odio earum illum, ad aspernatur. Unde perspiciatis aut maxime, voluptatum eveniet a illo, vero sunt adipisci doloribus qui quasi, soluta consectetur tenetur repellendus. Similique placeat sit, nam ipsa maxime, aliquam neque quasi deleniti quidem ut perferendis ullam ad.</p>
+
+    </div>
+
+   
     <br>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="400"
+  height="200"
+  viewBox="0 0 200 100"
+  style="outline: 2px dashed #2a2a2a;"
+  
+>
+  <circle r="75" cx="50%" cy="50%" fill="tomato" />
+</svg>
+
 </body>
 </html>
    
