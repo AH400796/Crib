@@ -1,16 +1,2 @@
 .test {
-	background-image: linear-gradient(
-		to right,
-		#f44336 25%,
-		#09792b 25%,
-		#09792b 50%,
-		#00b9ff 50%,
-		#00b9ff 75%,
-		#ffb800 75%
-	);
-	font-size: 24px;
 }
-
-/* .test p {
-	display: none;
-} */

@@ -404,6 +404,27 @@
             <tr>
                 <td colspan="2"><p> P.S. У Firefox для &lttextarea&gt значення normal, nowrap, і pre сприймаються як pre-wrap. Детальніше - <a href="https://css.in.ua/css/property/white-space" target="_blank">сюди</a>.</p></td>                                     
             </tr>
+             <thead>
+                <tr>
+                    <th colspan="3"><h2>Псевдоелементи тексту</h2></th>              
+                </tr>
+            </thead>
+            <tr>
+                <td class="first-td-tx" rowspan="2"><p><b>::first-letter</b></p>
+                </td>                     
+            </tr>           
+            <tr>
+                <td colspan="2"><p>Управляє стилем першого символу в тексті елемента, до якого додається. До цього псевдоелементу можна
+                     застосувати тільки властивості оформлення шрифту, кольору, фону, а також геометрії елемента. <a href="https://css.in.ua/css/selector/first-letter" target="_blank"> Детальніше</a></p></td>                                     
+            </tr>          
+                        
+            <tr>
+                <td class="first-td-tx" rowspan="2"><p><b>::selection</b></p></td>                         
+            </tr>
+            <tr>
+                <td colspan="2"><p>Управляє стилем виділення тексту елемента, перевизначаючи стандартні значення з таблиці стилів браузера.
+                     В оформленні можна використовувати тільки властивості color, background-color, cursor та outline. <a href="https://css.in.ua/css/selector/selection" target="_blank"> Детальніше</a></p></td>                                     
+            </tr> 
             <thead>
                 <tr>
                     <th colspan="3"><h2>Основні властивості для шрифту</h2></th>              
@@ -480,6 +501,122 @@
             </tr>
              <tr>
                 <td colspan="3"><p> Пікдлючення шрифтів виконуємо в HTML з сервісу <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> через тег &ltlink&gt.</p></td>                                     
+            </tr> 
+            <thead>
+                <tr>
+                    <th colspan="3"><h2>Геометричні властивості</h2></th>              
+                </tr>
+            </thead>
+            <tr>
+                <td class="first-td-tx"><p><b>width</b><br><br><b>height</b><br><br>Ці властивості дозволяють явно вказати загальну ширину і висоту елемента, або 
+                    тільки розмір його області вмісту (контенту), все залежить від типу блокової моделі.</p>
+                </td> 
+                <td colspan="2"><p>Кілька порад для використання цих властивостей: <br><br> - Не ставте елементам фіксовану висоту, нехай вона визначається 
+                    контентом. Точно встановлена висота призводить до проблеми переповнення, коли контенту більше, ніж елемент може вмістити.<br><br>
+                    - Більшості елементів задається тільки ширина. Вказувати одночасно width і height варто тільки декоративним елементам з фіксованим
+                     розміром, наприклад іконкам.<br><br>- Ширину можна задавати не тільки в px, em або rem, але й у відсотках. У такому разі ширина
+                      блоку буде розрахована як відсоток від ширини батька.</p></td>                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="4"><p><b>box-sizing</b><br><br>Встановлює тип блокової моделі елемента - формулу розрахунку його розмірів.</p></td>
+                <td><p>content-box <br>(за замовчуванням)</p></td>
+                <td class="third-td-tx"><p>властивості width і height задають ширину і висоту області вмісту (контенту область) і не включають розміри полів (padding),
+                     меж (border) і відступів (margin).</p></td>          
+            </tr>          
+            <tr>
+                <td><p>border-box</p></td>
+                <td class="third-td-tx"><p>властивості width і height задають фінальний розмір елемента і включають значення полів (padding) і меж (border),
+                     але не відступів (margin).</p></td>                     
+            </tr>        
+            <tr>
+                <td><p>inherit</p></td>
+                <td class="third-td-tx"><p>Успадкує значення властивості від свого батьківського елемента</p></td>                     
+            </tr><tr>
+                <td colspan="2"><p>Стандартна блокова модель в сучасних проектах - це border-box. Використовуючи універсальний селектор *,
+                     значення border-box встановлюється для всіх елементів і псевдоелементів документа на самому початку файлу стилів за допомогою
+                      наступного CSS-коду: <br> <img src="./images/10.jpg" alt=""></p></td>
+            </tr>
+            <tr>
+               <td colspan="3"><p>Нормалізація стилів -  це техніка поліпшення кросбраузерності веб-сторінки (однакового відображення і роботи сайту в різних браузерах) 
+                    шляхом підключення ще одного файлу стилів, в якому виправлені всі можливі розбіжності між таблицями стилів браузерів. В нормалізаторі
+                     <a href="https://github.com/sindresorhus/modern-normalize" target="_blank">modern-normalize</a> за замовчуванням заданий глобальний border-box, тому в 
+                     своїх стилях його можна не вказувати. Підключення modern-normalize: за допомогою тегу &ltlink&gt підключити <b>ПЕРЕД</b> своїм файлом стилів мініфікований варіант натупного
+                      <a href="https://cdnjs.com/libraries/modern-normalize" target="_blank">посилання</a>: <br><br> &ltlink  rel="stylesheet" 
+                      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/&gt</p></td> 
+            </tr>           
+            <tr>
+                <td class="first-td-tx" rowspan="4"><p><b>padding</b><br><br>Збірна властивість контролює внутрішні поля між контентом і рамкою для усіх сторін елемента.
+                     Результат роботи залежить від кількості значень властивості.</p></td>
+                <td><p>padding-top</p></td>
+                <td class="third-td-tx" rowspan="4"><p>Поля (падінги) використовуються для декоративних ефектів. Наприклад, для створення вільного простору між рамкою елемента і 
+                    його контентом, як в прикладі. Якщо не поставити падінг, то текст буде негарно прилягати до межі абзацу. Тобто вони визначають вільне місце (проміжки) між елементом-батьком
+                     та елментами-нащадками, що в ньому знаходяться</p></td>          
+            </tr>          
+            <tr>
+                <td><p>padding-right</p></td>                                  
+            </tr>        
+            <tr>
+                <td><p>padding-bottom</p></td>                                   
+            </tr>
+            <tr>
+                <td><p>padding-left</p></td>                                     
+            </tr>
+            <tr>
+                <td class="first-td-tx" rowspan="4"><p><b>margin</b><br><br>Збірна властивість контролює зовнішні відступи від рамки для всіх сторін елемента. 
+                    Результат роботи залежить від кількості значень властивості.</p></td>
+                <td><p>margin-top</p></td>
+                <td class="third-td-tx" rowspan="4"><p>Зовнішні відступи використовуються для створення вільного місця (проміжку) між двома сусідніми елементами, що розташовані на одному рівні.
+                     </p></td>          
+            </tr>          
+            <tr>
+                <td><p>margin-right</p></td>                                  
+            </tr>        
+            <tr>
+                <td><p>margin-bottom</p></td>                                   
+            </tr>
+            <tr>
+                <td><p>margin-left</p></td>                                     
+            </tr>
+             <tr>
+                <td class="first-td-tx" rowspan="9"><p><b>border</b><br><br>Збірна властивість контролює ширину, стиль і колір рамки (межі) елемента.</p></td>
+                <td ><p>border-width</p></td>
+                <td><p>Визначає ширину рамки</p></td> 
+            </tr>          
+            <tr>
+                <td><p>border-style</p></td>
+                <td><p>Визначає стиль рамки (solid / dashed / dotted та інші)</p></td>                                                
+            </tr>
+            <tr>
+                <td><p>border-color</p></td>  
+                <td><p>Визначає колір рамки</p></td>                                      
+            </tr>  
+            <tr>
+                <td><p>initial</p></td>
+                <td ><p>Встановлює цю властивість в значення без задання</p></td>                                       
+            </tr>  
+            <tr>
+                <td><p>inherit</p></td>
+                <td ><p>Успадкує значення властивості від свого батьківського елемента</p></td>                                                                  
+            </tr>  
+            <tr>
+                <td style="background-color: #b9b9b9" colspan="2"><p>Можна задати індивідуальні стилі рамці з кожної сторони елемента. 
+                    Формат імені властивості простий - border-сторона-властивість: значення.</p></td>
+            </tr>
+            <tr>                   
+                <td ><p>border-top-***</p></td>
+                <td><p>border-right-***</p></td>
+            </tr>
+            <tr>
+                <td><p>border-bottom-***</p></td>
+                <td><p>border-left-***</p></td>                  
+            </tr>            
+            <tr>
+                <td colspan="2"><p>Детальніше - <a href="https://css.in.ua/css/property/border" target="_blank">сюди</p></td>                                  
+            </tr>
+             <tr>
+                <td><p><b>border-radius</b><br><br>Збірна властивість, для заокруглення усіх кутів рамки. Значенням можуть бути як
+                     абсолютні, так і відносні одиниці.</p></td>  
+                <td colspan="2"><p>Для заокрулгення окремих кутів використовують наступні властивості: <br><br> border-top-left-radius / border-top-right-radius / border-bottom-right-radius / border-bottom-left-radius</p></td>                                   
             </tr>
                                     
                     
@@ -487,7 +624,7 @@
     </table>
      
 
-
+   <br>   <br>   <br>   <br>   <br>   <br>   <br>
     <div class="test">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime omnis reprehenderit autem odio earum illum, ad aspernatur. Unde perspiciatis aut maxime, voluptatum eveniet a illo, vero sunt adipisci doloribus qui quasi, soluta consectetur tenetur repellendus. Similique placeat sit, nam ipsa maxime, aliquam neque quasi deleniti quidem ut perferendis ullam ad.</p>
 
@@ -496,16 +633,7 @@
    
     <br>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="400"
-  height="200"
-  viewBox="0 0 200 100"
-  style="outline: 2px dashed #2a2a2a;"
-  
->
-  <circle r="75" cx="50%" cy="50%" fill="tomato" />
-</svg>
+
 
 </body>
 </html>
