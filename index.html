@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Шпаргалка по HTML5 та CSS</title>
     <style>
+        
         table {
             width: 100%;
         }
@@ -38,6 +39,35 @@
         }
         #top {
             text-align:center;           
+        }
+
+        .arrow {
+            position: fixed;
+            bottom: 20px;
+            right: 50px;                      
+        }
+
+        .arrow { 
+            font-size: 20px;
+            border-radius: 20px;
+            border: 3px solid rgb(8, 8, 8);
+            background-color: rgb(255, 255, 255);
+            display: inline-block;           
+            color: rgb(15, 15, 15);
+            opacity: 0.6;
+        }
+
+        .arrow:hover {
+            opacity: 1;
+        }
+
+        .arrow p {
+            margin-left: 0px;            
+        }
+
+        .icon {
+            fill: currentColor;
+            stroke: rgb(25, 16, 148);
         }
         
    </style>
@@ -465,6 +495,10 @@
         </tbody>
     </table>
     <br>
-    <div  style="text-align:center; margin-bottom: 30px;"><a href="#top">Наверх</a></div>
+    <a class="arrow" href="#top">
+        <svg class="icon" width="32" height="32">
+            <use href="./images/symbol-defs.svg#icon-arrow-up"></use>
+        </svg><p>наверх</p> 
+    </a>
     
 </html>
