@@ -47,14 +47,16 @@
             right: 50px;                      
         }
 
-        .arrow { 
-            font-size: 20px;
+       .arrow { 
+            font-size: 14px;
+        padding-top: 5px;
+            border: 3px solid rgb(255, 255, 255);
             border-radius: 20px;
-            border: 3px solid rgb(8, 8, 8);
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
             display: inline-block;           
-            color: rgb(15, 15, 15);
-            opacity: 0.6;
+            color: rgb(255, 255, 255);
+            opacity: 0.4;
+            text-decoration: none;
         }
 
         .arrow:hover {
@@ -67,7 +69,7 @@
 
         .icon {
             fill: currentColor;
-            stroke: rgb(25, 16, 148);
+            stroke:currentColor;
         }
         
    </style>
@@ -500,7 +502,7 @@
     </table>
     <br>
     <a class="arrow" href="#top">
-        <svg class="icon" width="32" height="32">
+        <svg class="icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-arrow-up"></use>
         </svg><p>наверх</p> 
     </a>
