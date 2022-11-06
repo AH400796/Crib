@@ -16,7 +16,7 @@
             width: 15%;
         }
         .first-td-tx {
-            width: 25%;
+            width: 27%;
         }
 
         .third-td {
@@ -114,6 +114,14 @@
         </thead>
         <tbody>
             <tr>
+                <td class="first-td"><p><b>Суворий режим<br></b></p></td>
+                <td><p>Нова можливість у специфікації ECMAScript 5, яка дозволяє переводити скрипт у режим повної відповідності сучасному
+                     стандарту. Це запобігає певним помилкам, як-от використання небезпечних і застарілих конструкцій. Для того, щоб
+                      перевести скрипт в суворий режим, достатньо зазначити директиву на початку js-файлу.</p>
+                </td>
+                <td class="third-td">"use strict";</td>           
+            </tr>
+            <tr>
                 <td class="first-td"><p><b>Інструкція<br>(statement)</b></p></td>
                 <td><p>пов'язаний набір слів і символів із синтаксису мови, які об'єднуються 
                     з метою вираження однієї ідеї, однієї інструкції для машини. Інструкції в JavaScript завершуються крапкою з комою.</p>
@@ -147,14 +155,7 @@
                 </td>
                 <td class="third-td">XXXXXX.ім`я_методу()</td>           
             </tr>
-            <tr>
-                <td class="first-td"><p><b>Суворий режим<br></b></p></td>
-                <td><p>Нова можливість у специфікації ECMAScript 5, яка дозволяє переводити скрипт у режим повної відповідності сучасному
-                     стандарту. Це запобігає певним помилкам, як-от використання небезпечних і застарілих конструкцій. Для того, щоб
-                      перевести скрипт в суворий режим, достатньо зазначити директиву на початку js-файлу.</p>
-                </td>
-                <td class="third-td">"use strict";</td>           
-            </tr>
+            
         </tbody>
     </table>
     <br>
@@ -555,73 +556,73 @@
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.length</b></p></td>
                 <td><p>вбудована властивість рядка</p></td>
-                <td class="third-td-tx" ><p>вказує довжину рядка, тобто кількість його символів</p></td>           
+                <td class="third-td-tx"><p>вказує довжину рядка, тобто кількість його символів</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">string</span>.toLowerCase()</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок у "нижньому" регістрі, не змінюючи оригінальний рядок.</p>
+                <td class="third-td-tx"><p>повертає новий рядок у "нижньому" регістрі, не змінюючи оригінальний рядок.</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">string</span>.toUpperCase()</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок у "ВЕРХНЬОМУ" регістрі, не змінюючи оригінальний рядок.</p>
+                <td class="third-td-tx"><p>повертає новий рядок у "ВЕРХНЬОМУ" регістрі, не змінюючи оригінальний рядок.</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.indexOf(<span style="color: #dd8c00">substring</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає індекс (позицію елемента в рядку), на якому знаходиться перший збіг підрядка (substring) або -1
+                <td class="third-td-tx"><p>повертає індекс (позицію елемента в рядку), на якому знаходиться перший збіг підрядка (substring) або -1
                     , якщо  нічого не знайдено (заданого підрядка немає у рядку).</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.includes(<span style="color: #dd8c00">substring</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>перевіряє, чи міститься підрядок в рядку, повертає <b>true</b>, якщо міститься, і <b>false</b> - якщо ні. Регістр
+                <td class="third-td-tx"><p>перевіряє, чи міститься підрядок в рядку, повертає <b>true</b>, якщо міститься, і <b>false</b> - якщо ні. Регістр
                      символів в рядку і підрядку має значення, оскільки, наприклад, літера "a" не дорівнює літері "А".</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.endsWith(<span style="color: #dd8c00">substring</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>дозволяє визначити, чи завершується рядок символами (підрядком), зазначеними в дужках, повертаючи <b>true</b> або <b>false</b></p></td>           
+                <td class="third-td-tx"><p>дозволяє визначити, чи завершується рядок символами (підрядком), зазначеними в дужках, повертаючи <b>true</b> або <b>false</b></p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.replace(<span style="color: #dd8c00">substring1, substring2</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок, в якому ПЕРШИЙ збіг підрядка (substring1) буде замінений на вказане значення (substring2).</p></td>           
+                <td class="third-td-tx"><p>повертає новий рядок, в якому ПЕРШИЙ збіг підрядка (substring1) буде замінений на вказане значення (substring2).</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.replaceAll(<span style="color: #dd8c00">substring1, substring2</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок, в якому УСІ збіги підрядка (substring1) будуть замінені на вказане значення (substring2).</p></td>           
+                <td class="third-td-tx"><p>повертає новий рядок, в якому УСІ збіги підрядка (substring1) будуть замінені на вказане значення (substring2).</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.slice(<span style="color: #dd8c00">startIndex, endIndex</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>використовується для створення копії частини або всього рядка: він робить копію елементів рядка від <b>startIndex</b> і до
+                <td class="third-td-tx"><p>використовується для створення копії частини або всього рядка: він робить копію елементів рядка від <b>startIndex</b> і до
                      (але не включно) <b>endIndex</b> та повертає новий рядок, не змінюючи оригінал.</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string1</span>.concat(<span style="color: #dd8c00">string2</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок - результат об’єднання викликаючого рядка  з рядком в дужках (послідовність важлива)</p></td>           
+                <td class="third-td-tx"><p>повертає новий рядок - результат об’єднання викликаючого рядка  з рядком в дужках (послідовність важлива)</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.repeat(<span style="color: #dd8c00">number</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>повертає новий рядок, який містить вказану кількість (number) копій початкового рядка (string), об’єднаних разом</p></td>           
+                <td class="third-td-tx"><p>повертає новий рядок, який містить вказану кількість (number) копій початкового рядка (string), об’єднаних разом</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.trim()</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>видаляє пробіли з обох кінців рядка та повертає новий рядок, не змінюючи оригінальний рядок. Щоб повернути новий рядок
+                <td class="third-td-tx"><p>видаляє пробіли з обох кінців рядка та повертає новий рядок, не змінюючи оригінальний рядок. Щоб повернути новий рядок
                      із обрізаним пробілом лише з одного кінця, використовуйте trimStart()або trimEnd()</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">string</span>.split(<span style="color: #dd8c00">delimiter</span>)</b></p></td>
                 <td><p>метод рядка</p></td>
-                <td class="third-td-tx" ><p>перетворює рядок в масив, «розбиваючи» його роздільником <b>delimiter</b>. Якщо роздільник - це порожній рядок (""),
+                <td class="third-td-tx"><p>перетворює рядок в масив, «розбиваючи» його роздільником <b>delimiter</b>. Якщо роздільник - це порожній рядок (""),
                      то створиться масив окремих символів. Роздільником може бути один або декілька символів.</p></td>           
             </tr>
             <!-- МАСИВИ -->
@@ -640,96 +641,186 @@
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">array</span>[index]</b></p></td>
                 <td><p>звертання до елементів масиву</p></td>
-                <td class="third-td-tx" ><p>синтаксис квадратних дужок - використовується для доступу до значення елемента масиву.
+                <td class="third-td-tx"><p>синтаксис квадратних дужок - використовується для доступу до значення елемента масиву.
                       Між іменем змінної, що зберігає масив, і квадратними дужками не повинно бути пробілу. На відміну від рядків, які можна лише зчитувати, елементи
                        масиву можна змінювати, звернувшись до них за індексом і переприсвоївши інше значення.</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color: #dd8c00">array</span>.length</b></p></td>
                 <td><p>властивість масиву</p></td>
-                <td class="third-td-tx" ><p>вказує довжину масиву, тобто кількість елементів які містить масив. Це динамічна величина,
+                <td class="third-td-tx"><p>вказує довжину масиву, тобто кількість елементів які містить масив. Це динамічна величина,
                      яка змінюється автоматично під час додавання або видалення елементів</p></td>           
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.join(<span style="color: #dd8c00">delimiter</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>об'єднує елементи масиву в рядок, який і повертає. У рядку елементи будуть розділені символом або групою символів, 
+                <td class="third-td-tx"><p>об'єднує елементи масиву в рядок, який і повертає. У рядку елементи будуть розділені символом або групою символів, 
                     зазначених в <b>delimiter</b>. Тобто ця операція протилежна методу рядків split(delimiter).</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.indexOf(<span style="color: #dd8c00">value</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>повертає перший індекс, під яким елемент зі значенням <b>value</b> був знайдений в масиві, або число -1, якщо
+                <td class="third-td-tx"><p>повертає перший індекс, під яким елемент зі значенням <b>value</b> був знайдений в масиві, або число -1, якщо
                      такий елемент відсутній</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.includes(<span style="color: #dd8c00">value</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>перевіряє, чи містить масив елемент зі значенням <b>value</b> і повертає <b>true</b> або <b>false</b> відповідно. Застосування цього
+                <td class="third-td-tx"><p>перевіряє, чи містить масив елемент зі значенням <b>value</b> і повертає <b>true</b> або <b>false</b> відповідно. Застосування цього
                      методу корисне в ситуаціях, коли необхідно перевірити, чи є елемент в масиві і не важлива його позиція (не потрібен індекс)</p>
                 </td>          
             </tr>
            <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.push(<span style="color: #dd8c00">element1, element2, ...</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>добавляє елемент (елементи) в кінець масиву. Повертає довжину масиву після додавання елементів. Змінює довжину масиву</p>
+                <td class="third-td-tx"><p>добавляє елемент (елементи) в кінець масиву. Повертає довжину масиву після додавання елементів. Змінює довжину масиву</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.pop()</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>видаляє останній елемент масиву і повертає видалений елемент. Якщо масив порожній, метод повертає <b>undefined</b>. Змінює довжину масиву </p>
+                <td class="third-td-tx"><p>видаляє останній елемент масиву і повертає видалений елемент. Якщо масив порожній, метод повертає <b>undefined</b>. Змінює довжину масиву </p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.unshift(<span style="color: #dd8c00">element1, element2, ...</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>добавляє елемент (елементи) на початок масиву. Повертає довжину масиву після додавання елементів. Змінює довжину масиву </p>
+                <td class="third-td-tx"><p>добавляє елемент (елементи) на початок масиву. Повертає довжину масиву після додавання елементів. Змінює довжину масиву </p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.shift()</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>видаляє перший елемент масиву і повертає видалений елемент. Якщо масив порожній, метод повертає <b>undefined</b>. Змінює довжину масиву</p>
+                <td class="third-td-tx"><p>видаляє перший елемент масиву і повертає видалений елемент. Якщо масив порожній, метод повертає <b>undefined</b>. Змінює довжину масиву</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.slice(<span style="color: #dd8c00">begin, end</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>повертає новий масив, що містить копію частини вихідного масиву, не змінюючи його. Копія створюється з індексу
+                <td class="third-td-tx"><p>повертає новий масив, що містить копію частини вихідного масиву, не змінюючи його. Копія створюється з індексу
                      <b>begin</b> і до індексу (але не включно), <b>end</b> вихідного масиву.</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx"><p><b><span style="color:#dd8c00">array1</span>.concat(<span style="color: #dd8c00">array2, array3, ...</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>повертає новий масив, що об'єднує два або більше масивів в один. Порядок аргументів методу впливає на порядок елементів нового масиву</p>
+                <td class="third-td-tx"><p>повертає новий масив, що об'єднує два або більше масивів в один. Порядок аргументів методу впливає на порядок елементів нового масиву</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.slpice(<span style="color: #dd8c00">start, number</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>видалення елементів з масиву: <b>start</b> - індекс елементу, з якого потрібно почати видалення; <b>number</b> - кількість елементів, які необхідно
+                <td class="third-td-tx"><p>видалення елементів з масиву: <b>start</b> - індекс елементу, з якого потрібно почати видалення; <b>number</b> - кількість елементів, які необхідно
                      видалити. Змінює вихідний масив і повертає масив, що містить видалені елементи</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.slpice(<span style="color: #dd8c00">start,</span> 0,<span style="color: #dd8c00"> element1, element2, ...</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>додавання елементів в масив: <b>start</b> - індекс, з якого потрібно почати додавання нових елементів; 0 - вказівка не видаляти жодних елементів,
+                <td class="third-td-tx"><p>додавання елементів в масив: <b>start</b> - індекс, з якого потрібно почати додавання нових елементів; 0 - вказівка не видаляти жодних елементів,
                      <b>element1, element2, ...</b> - нові елементи, які потрібно додат. Змінює вихідний масив і повертає пустий масив [] (масив, що містить видалені елементи)</p>
                 </td>          
             </tr>
             <tr>
                 <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.slpice(<span style="color: #dd8c00">start, number, element1, element2, ...</span>)</b></p></td>
                 <td><p>метод масиву</p></td>
-                <td class="third-td-tx" ><p>заміна елементів в масиві: <b>start</b> - індекс елементу, з якого потрібно почати заміну елементів; <b>number</b> - кількість елементів, які необхідно замінити;
+                <td class="third-td-tx"><p>заміна елементів в масиві: <b>start</b> - індекс елементу, з якого потрібно почати заміну елементів; <b>number</b> - кількість елементів, які необхідно замінити;
                      <b>element1, element2, ...</b> - нові елементи, якими потрібно замінити старі. Змінює вихідний масив і повертає масив, що містить замінені елементи</p>
                 </td>          
             </tr>
-            
+            <tr>
+                <td style="padding: 10px;" colspan="3">Перебираючі методи масиву - методи масивів, що прийшли з функціональних мов. Більшість з них - це чисті функції. Вони створюють новий масив, заповнюють його,
+                     застосовуючи до значення кожного елемента зазначену <b>колбек-функцію</b>, після чого повертають цей новий масив. Усі перебираючі методи масивів мають схожий синтаксис - вихідний масив
+                      <b>array</b>, виклик методу <b>method</b> і 
+                     колбек-функція <b>callback</b> як аргумент методу: <b> array.method(callback)</b>
+                </td>
+            </tr>     
+           <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.map(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>map</b>(callback) використовується для трансформації масиву. Він викликає колбек-функцію для кожного елемента вихідного масиву, а результат її роботи записує
+                     у новий масив, який і буде результатом виконання методу: <br>-- не змінює оригінальний масив; <br> - поелементо перебирає оригінальний масив; <br> - результат роботи колбек-функції
+                      записується у новий масив; <br>- повертає новий масив однакової довжини.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.flatMap(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>flatMap</b>(callback) аналогічний методу map(), але відміність від map() у тому, що новий масив «розгладжується» на глибину, що дорівнює одній вкладеності</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.filter(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>filter</b>(callback) використовується для єдиної операції - фільтрації масиву, тобто, коли необхідно вибрати більше одного елемента з колекції за
+                     певним критерієм: <br>- не змінює оригінальний масив; <br>- поелементо перебирає оригінальний масив; <br>- повертає новий масив, у який додає елементи, які задовольняють
+                      умови колбек-функції ( true - елемент додається, false - не додається); <br>- якщо жоден елемент не задовольнив умову, повертає порожній масив.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.find(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>find</b>(callback) дозволяє знайти і повернути перший елемент, який задовільняє умову, після чого перебирання масиву припиняється: <br>- не
+                     змінює оригінальний масив; <br>- поелементо перебирає оригінальний масив; <br>- повертає перший елемент, який задовільняє умови колбек-функції (колбек повертає true); <br>- якщо жоден елемент не
+                      задовольнив умову, повертає undefined.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.findIndex(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>findIndex</b>(callback) повертає індекс першого елемента, який задовільняє умову, після чого перебирання масиву припиняється - це сучасна заміна методу indexOf().
+                     Дозволяє виконувати пошук за складнішими умовами, ніж просто рівність. Використовується як для пошуку у масиві примітивів, так і в масиві об'єктів: <br>- не
+                     змінює оригінальний масив; <br>- поелементо перебирає оригінальний масив; <br>- повертає індекс першого елемента, який задовільняє умови колбек-функції (колбек повертає true); <br>- якщо жоден
+                      елемент не задовольняє умову, тобто для всіх елементів колбек повернув false, метод повертає -1.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.every(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>every</b>(callback) перевіряє, чи проходять всі елементи масиву тест колбек-функції. Повертає true або false: <br>- не
+                     змінює оригінальний масив; <br>- поелементо перебирає оригінальний масив; <br>- повертає true, якщо всі елементи масиву задовольняють умову; <br>- повертає false, якщо хоча б
+                      один елемент масиву не задовольняє умову;<br>- перебирання масиву припиняється, якщо колбек повертає false.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx"><p><b><span style="color:#dd8c00">array</span>.some(<span style="color: #5dc266">(element, index, array) =>{ }</span>)</b></p></td>
+                <td><p>перебираючий метод масиву <br><br>element - елемент масиву (обов'язковий) <br><span style="color:#a7a6a6">index - індекс елемента (необов'язковий)</span> <br><span style="color:#a7a6a6">
+                    array - вихідний масив(необов'язковий)</span></p></td>
+                <td class="third-td-tx"><p>Метод <b>some</b>(callback) перевіряє, чи проходить хоча б один елемент масиву тест колбек-функції. Повертає true або false: <br>- не
+                     змінює оригінальний масив; <br>- поелементо перебирає оригінальний масив; <br>- повертає true, якщо хоча б один елемент масиву задовольняє умову; <br>- повертає false, якщо жоден елемент
+                      масиву не задовольняє умову;<br>- перебирання масиву припиняється, якщо колбек повертає true.</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.sort()</b></p></td>
+                <td><p>перебираючий метод масиву</p></td>
+                <td class="third-td-tx"><p>Метод <b>sort</b>(callback) сортує елементи масиву: <br>- сортує і змінює вихідний
+                     масив; <br>- повертає змінений масив, тобто посилання на відсортований вихідний; <br>- за замовчуванням сортує за зростанням; <br>- сортування відбувається шляхом приведення
+                      значень до рядка і порівняння порядкових номерів у таблиці Unicode</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.sort(<span style="color: #5dc266">(a, b) => a - b </span>)</b></p><br>
+                <p><b><span style="color:#dd8c00">array</span>.sort(<span style="color: #5dc266">(a, b) =>  b - a </span>)</b></p>
+                <td><p>перебираючий метод масиву </p></td>
+                <td class="third-td-tx"><p> - сортування чисел за зростанням;<br><br><br> - сортування чисел за спаданням;</p>
+                </td>          
+            </tr>
+            <tr>
+                <td class="first-td-tx" style="background-color: #ffd8d8"><p><b><span style="color:#dd8c00">array</span>.sort(<span style="color: #5dc266">(a, b) => a.localeCompare(b) </span>)</b></p><br>
+                <p><b><span style="color:#dd8c00">array</span>.sort(<span style="color: #5dc266">(a, b) => b.localeCompare(a) </span>)</b></p>
+                <td><p>перебираючий метод масиву </p></td>
+                <td class="third-td-tx"><p> - сортування рядків за зростанням;<br><br><br> - сортування рядків за спаданням;</p>
+                </td>          
+            </tr>
            
 
 
